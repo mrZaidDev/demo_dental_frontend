@@ -22,7 +22,7 @@ const CreatePatient = () => {
         advance: Number(patientData.advance),
       };
       const res = await axios.post(
-        "http://localhost:5000/api/dental/create-patient",
+        "https://demo-dental-backend.onrender.com/api/dental/create-patient",
         data,
         { withCredentials: true }
       );

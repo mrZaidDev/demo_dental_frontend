@@ -21,7 +21,7 @@ const UpdatePatient = () => {
     const gettingSinglePatient = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/dental/patient/${id}`,
+          `https://demo-dental-backend.onrender.com/api/dental/patient/${id}`,
           { withCredentials: true }
         );
         setPatientData({
@@ -47,7 +47,7 @@ const UpdatePatient = () => {
         advance: Number(patientData.advance),
       };
       const res = await axios.put(
-        `http://localhost:5000/api/dental/update-patient/${id}`,
+        `https://demo-dental-backend.onrender.com/api/dental/update-patient/${id}`,
         data,
         { withCredentials: true }
       );

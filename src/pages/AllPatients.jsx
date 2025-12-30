@@ -14,7 +14,7 @@ const AllPatients = () => {
     const fetchPatients = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/dental/patients`,
+          `https://demo-dental-backend.onrender.com/api/dental/patients`,
           { withCredentials: true }
         );
         setPatientsData(response.data.patients);
@@ -28,7 +28,7 @@ const AllPatients = () => {
   const handlePatientDelete = async (patient_id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/dental/delete-patient/${patient_id}`,
+        `https://demo-dental-backend.onrender.com/api/dental/delete-patient/${patient_id}`,
         { withCredentials: true }
       );
       const filterDeletedPatient = patientsData.filter(
@@ -58,7 +58,7 @@ const AllPatients = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.post(`http://localhost:5000/api/auth/logout`, {
+      const res = await axios.post(`https://demo-dental-backend.onrender.com/api/auth/logout`, {
         withCredentials: true,
       });
       document.cookie =

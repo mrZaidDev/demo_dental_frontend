@@ -16,7 +16,7 @@ const AllEarning = () => {
     const fetchPatients = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/dental/patients`,
+          `https://demo-dental-backend.onrender.com/api/dental/patients`,
           { withCredentials: true }
         );
         const TotalRevenue = response.data.patients.reduce((sum,patient)=>sum + patient.total, 0)

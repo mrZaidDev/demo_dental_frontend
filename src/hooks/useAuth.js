@@ -9,7 +9,7 @@ export const useAuth = () => {
   useEffect(() => {
     const verifyAuth = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/verify',{withCredentials:true});
+        const response = await axios.get('https://demo-dental-backend.onrender.com/api/auth/verify',{withCredentials:true});
         if (response.status === 200) {
           setIsAuthenticated(true);
         }
